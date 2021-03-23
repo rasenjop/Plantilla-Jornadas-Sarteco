@@ -1,0 +1,117 @@
+%%%%% Fichero de ejemplo LaTeX que ilustra el uso de la Hoja de Estilo %%%%%%
+%%%%% Jornadas.cls para Jornadas Sarteco
+
+\documentclass[twocolumn,twoside]{Jornadas}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algcompatible}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
+\usepackage[caption=false,font=footnotesize]{subfig}
+%\setlength{\marginparwidth}{2cm}
+%\usepackage{todonotes}
+\usepackage{placeins}
+\usepackage{url}
+
+% -*- Ajustes LaTeX en relación a las figuras -*-
+\setcounter{topnumber}{10}     % Max. numero de figs. on top
+\setcounter{bottomnumber}{10}  % Max. numero de figs. abajo
+\setcounter{totalnumber}{10}   % Max. numero de figs. por pagina
+\renewcommand{\topfraction}{1} % Max. fraccion de pagina ocupada por figs.
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}  % Min. fraccion de pagina ocupada por texto
+\renewcommand{\floatpagefraction}{1} % Max. espacio de pagina solo con figs.
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\lstset{
+     inputencoding=utf8,
+     extendedchars=true,
+     backgroundcolor=\color{gray97},
+     %
+     stringstyle=\ttfamily,
+     showstringspaces = false,
+     basicstyle=\scriptsize\ttfamily,
+     commentstyle=\color{gray45},
+     keywordstyle=\bfseries,
+     %
+     numbers=left,
+     numbersep=6pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     firstnumber=auto,
+     breaklines=true,
+     %
+     escapeinside={(*@}{@*)},
+     literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1
+   }
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\newtheorem{theorem}{Teorema}
+
+\hyphenation{pa-ra-le-lis-mo pro-cee-dings}
+
+%Directorios en los que se buscan las figuras
+\graphicspath{{.}{./Figuras/}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Usando la hoja de estilo Jornadas.cls}
+
+\author{%
+     Jesús González%
+     \thanks{Dpto. de Informática, Universidad de Tombuctú, e-mail: {\tt gonzales@tbt.edu.}},
+     Ángela González$^2$ y Moisés Salmerón%
+     \thanks{Dpto. de Arquitectura de Computadores, Universidad de Pernambuco, e-mail: {\tt salmeron@per.edu.}}
+}
+
+\maketitle
+% Oculta las cabeceras y los números de página.
+% Ambos elementos se añadirán durante la edición de las actas completas.
+\markboth{}{}
+\pagestyle{empty} 
+\thispagestyle{empty} % Oculta el número de la primera página
+
+\begin{abstract}
+Este artículo explica cómo usar la hoja de estilo \LaTeX\ para las
+Jornadas Sarteco.
+\end{abstract}
+
+\begin{keywords}
+Hoja de estilo, \LaTeX, Jornadas Sarteco.
+\end{keywords}
+
+%Añade los ficheros que necesites:
+
+\input{01-Intro.tex}
+\input{02-Background.tex}
+\input{03-Method.tex}
+\input{04-Experimental.tex}
+\input{05-Conclusions.tex}
+
+
+\section*{Agradecimientos}
+
+Añadir en esta sección no numerada los posibles agradecimientos a proyectos,
+instituciones o personas. Por ejemplo: El presente trabajo ha sido financiado
+mediante  el proyecto xxxx-xxxxx-xxx. 
+
+%Comenta la línea \nocite para que sólo se incluyan en las referencias
+%las entradas que esté referenciadas en el texto con \cite{}
+\nocite{*}
+\bibliographystyle{Jornadas}
+\bibliography{biblio}
+
+\end{document}
+
