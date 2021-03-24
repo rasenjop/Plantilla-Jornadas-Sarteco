@@ -7,13 +7,13 @@
 %% para el tratamiento electrónico de artículos destinados a revistas del IEEE.
 %%
 %% Personalización para las Jornadas Sarteco efectuada por
-%% Jesús González Peñalver y
-%% Moisés Salmerón Campos
+%% Jesús González Peñalver y Moisés Salmerón Campos
 %% Dpto. Arquitectura y Tecnología de Computadores,
-%% UNIVERSIDAD DE GRANADA
+%% Universidad de Granada
 %% Mayo de 2000
 %%
 %% Plantilla Overleaf y actualización por Felipe Muñoz y Rafael Asenjo
+%% Dpto. Arquitectura de Computadores,
 %% Universidad de Málaga. Marzo 2021.
 %%
 %% Para cualquier consulta o problema relacionado con el uso de esta Hoja de
@@ -26,20 +26,6 @@
 %% LaTeX 2e, intente conseguir dicha versión, vea en www.tex.ac.uk, o quizá
 %% prefiera usar la Hoja de Estilo para Microsoft Word, vea en el sitio web
 %% de las Jornadas Sarteco.
-%%
-%% ADVERTENCIA: puede haber problemas con las fuentes matemáticas al intentar
-%%              usar construcciones del tipo $\mathbf{N}$ p.ej., para indicar
-%%              conjuntos de los naturales, enteros, reales, etc... Si piensa
-%%              usar ese tipo de notaciones, se aconseja usar los paquetes
-%%              'rawfonts' y 'oldfont' de LaTeX. Para más información sobre
-%%              este problema acudir a
-%%	        http://www.tex.ac.uk/CTAN/latex/bugs.html
-%%
-%%	        Otra forma de abordar este problema es usar corchetes
-%%              adicionales, como en este ejemplo:
-%%		$\mathbf{N}(0,P(0))$, en su lugar poner ${\mathbf{N}}(0,P(0))$
-%%		$\mathcal{N}(0,P(0))$, en su lugar poner
-%%                                     ${\mathcal{N}}(0,P(0))$
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -364,7 +350,7 @@
 \def\fps@table{tbp}
 \def\ftype@table{2}
 \def\ext@table{lot}
-\def\fnum@table{TABLA~\thetable}
+\def\fnum@table{Tabla~\thetable}
 \def\table{\@float{table}}
 \def\endtable{\end@float}
 \@namedef{table*}{\@dblfloat{table}}
